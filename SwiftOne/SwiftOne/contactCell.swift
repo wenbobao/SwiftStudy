@@ -1,23 +1,20 @@
 //
-//  ContactTableViewCell.swift
-//  WeiXinUI_Swift
+//  contactCell.swift
+//  SwiftOne
 //
-//  Created by bob on 16/2/22.
+//  Created by bob on 16/1/28.
 //  Copyright © 2016年 __company__. All rights reserved.
 //
 
 import UIKit
 
-class ContactTableViewCell: UITableViewCell {
-
-    var iconView :UIImageView!
-    var titleLabel :UILabel!
-    var contentLabel :UILabel!
+class contactCell: UITableViewCell {
+    
+    @IBOutlet weak var nameLable: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -25,7 +22,5 @@ class ContactTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
-    
 
 }
