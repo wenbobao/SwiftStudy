@@ -11,5 +11,8 @@
 
 #import "RDVTabBarController.h"
 #import "RDVTabBarItem.h"
+#import "Mantle.h"
+#import "AFNetworking.h"
+#import "Masonry.h"
 
 #endif /* WeiXinUI_Swift_Bridging_Header_h */
