@@ -39,25 +39,33 @@ class ViewController: UIViewController {
 //        }
         
         
-        Alamofire.request(.GET,"http://music.163.com/api/album/new", parameters: ["area":"ZH","offset":"0","total":"true","limit":"50"], headers: ["Referer":"http://music.163.com"])
+//        Alamofire.request(.GET,"http://music.163.com/api/album/new", parameters: ["area":"ZH","offset":"0","total":"true","limit":"50"], headers: ["Referer":"http://music.163.com"])
+//            .validate()
+//            .responseJSON {response in
+//                switch response.result{
+//                case .Success:
+//                    if let value = response.result.value {
+//                        let json = JSON(value)
+//                        
+//                       let albums = Mapper<XHAlbumResponse>()
+//                                        .map(json.dictionaryObject)
+//                        for (index, album) in (albums?.albums?.enumerate())!{
+//                            print("index: \(index),songName: \(album.songName)")
+//                        }
+//                    }
+//                case .Failure(let error):
+//                    print(error)
+//                }
+//
+//            }
+        
+        
+        Alamofire.request(.GET, "http://m.kuaidi100.com/index_all.html", parameters: ["type":"yunda","postid":"1901382266037"])
             .validate()
-            .responseJSON {response in
-                switch response.result{
-                case .Success:
-                    if let value = response.result.value {
-                        let json = JSON(value)
-                        
-                       let albums = Mapper<XHAlbumResponse>()
-                                        .map(json.dictionaryObject)
-                        for (index, album) in (albums?.albums?.enumerate())!{
-                            print("index: \(index),songName: \(album.songName)")
-                        }
-                    }
-                case .Failure(let error):
-                    print(error)
-                }
-
-            }
+            .responseString{ response in
+                print(response)
+                
+        }
     }
 
 
